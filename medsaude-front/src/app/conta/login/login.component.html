@@ -1,0 +1,26 @@
+﻿<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form">
+      <table>
+        <tr>
+          <td>
+            <mat-form-field class="">
+              <input matInput placeholder="Username" [(ngModel)]="login.email" name="username" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td><mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" [(ngModel)]="login.password"type="password" name="password" required>
+          </mat-form-field></td>
+        </tr></table>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="onSubmit() " color="primary">Login</button>
+    <button mat-raised-button [routerLink]="['/criar-conta']">Criar conta</button>
+  </mat-card-actions>
+</mat-card>
