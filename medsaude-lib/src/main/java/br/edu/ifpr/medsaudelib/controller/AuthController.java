@@ -26,7 +26,7 @@ public class AuthController {
 
     }
 
-    @PostMapping("/cadastrar")oi
+    @PostMapping("/cadastrar")
     public ResponseEntity<Object> cadastrar(@RequestBody @Validated UsuarioDTO usuarioDTO){
         ReturnData<Object> result = service.createUser(user.transformToEntity());
 
