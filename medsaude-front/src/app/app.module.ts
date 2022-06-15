@@ -16,6 +16,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from '@angular/material/input';
 import { HttpClientModule} from "@angular/common/http";
+import { httpInterceptorProviders} from "./http-interceptors";
 
 // @ts-ignore
 @NgModule({
@@ -40,7 +41,9 @@ import { HttpClientModule} from "@angular/common/http";
     MatInputModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
